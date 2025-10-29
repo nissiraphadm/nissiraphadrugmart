@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nissi Rapha Drug Mart — Your Neighborhood Pharmacy</title>
+  <meta name="description" content="Affordable and trusted medicines, vitamins, and healthcare essentials. Your community pharmacy for every Filipino family." />
+  <style>
+    :root {
+      --primary: #7ec850;
+      --accent: #a6ed80;
+      --bg: #f8fff5;
+      --text: #1a202c;
+      --muted: #4a5568;
+      --radius: 10px;
+      --shadow: 0 4px 14px rgba(0,0,0,0.08);
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    body {margin: 0; background: var(--bg); color: var(--text); line-height: 1.6;}
+    header {background: var(--primary); color: #fff; padding: 18px 28px; display: flex; justify-content: space-between; align-items: center;}
+    header h1 {margin: 0; font-size: 1.3rem;}
+    nav a {color: #fff; text-decoration: none; margin-left: 18px; font-size: 0.95rem;}
+    .hero {text-align: center; padding: 60px 18px; background: linear-gradient(180deg, #e6ffe0 0%, #ffffff 100%);}
+    .hero h2 {font-size: 2rem; margin-bottom: 10px; color: #2f855a;}
+    .btn {background: var(--accent); color: #1a202c; padding: 10px 20px; border-radius: var(--radius); text-decoration: none; font-weight: 600; display: inline-block; margin-top: 10px;}
+    .section {max-width: 1100px; margin: 40px auto; padding: 0 18px;}
+    .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;}
+    .card {background: #fff; padding: 18px; border-radius: var(--radius); box-shadow: var(--shadow);}
+    .card img {width: 100%; height: 150px; object-fit: cover; border-radius: var(--radius);}
+    footer {background: #276749; color: #e2e8f0; text-align: center; padding: 20px; font-size: 0.9rem;}
+    form {display: grid; gap: 10px; background: #fff; padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow); max-width: 600px; margin: 0 auto;}
+    input, textarea {width: 100%; padding: 10px; border-radius: var(--radius); border: 1px solid #cbd5e0;}
+    .contact-info {text-align: center; margin-top: 10px; color: var(--muted); font-size: 0.95rem;}
+    .social a {color: #1a202c; background: var(--accent); padding: 8px 14px; border-radius: var(--radius); text-decoration: none; font-weight: 600; display: inline-block; margin-top: 12px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nissi Rapha Drug Mart</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Your Health, Our Priority</h2>
+    <p>Providing affordable, authentic medicines and healthcare essentials for every Filipino family.</p>
+    <a href="#contact" class="btn">Order or Inquire</a>
+    <div class="contact-info">
+      📍 Unit 2 & 3 Montana Arcade, Azucena St., Triangulo, Naga City<br>
+      ☎️ 0928 676 3500
+      <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61564764930880" target="_blank">Visit our Facebook Page</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h3>About Us</h3>
+    <p>Nissi Rapha Drug Mart is a locally trusted pharmacy located at Unit 2 & 3 Montana Arcade, Azucena St., Triangulo, Naga City. We carry both branded and generic medicines, vitamins, first aid supplies, and more — with personalized care and fast service.</p>
+  </section>
+
+  <section id="products" class="section">
+    <h3>Featured Products</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/400x150?text=Medicines" alt="Medicines">
+        <h4>Prescription Medicines</h4>
+        <p>Authentic branded and generic medicines for your prescriptions.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x150?text=Vitamins" alt="Vitamins">
+        <h4>Vitamins & Supplements</h4>
+        <p>Keep your body strong with a range of multivitamins and minerals.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x150?text=Health+Essentials" alt="Health Essentials">
+        <h4>Health Essentials</h4>
+        <p>From alcohol and thermometers to blood pressure monitors.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h3>Contact Us</h3>
+    <p>Order inquiries, delivery requests, or prescription uploads — we’re here to help.</p>
+    <div class="contact-info">
+      📍 Unit 2 & 3 Montana Arcade, Azucena St., Triangulo, Naga City<br>
+      ☎️ 0928 676 3500<br>
+      <a href="https://www.facebook.com/profile.php?id=61564764930880" target="_blank">Facebook: Nissi Rapha Drug Mart</a>
+    </div>
+    <form onsubmit="event.preventDefault(); alert('Thank you! We’ll contact you shortly.')">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email or Mobile" required />
+      <textarea rows="4" placeholder="Your message or order details" required></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Nissi Rapha Drug Mart — Unit 2 & 3 Montana Arcade, Azucena St., Triangulo, Naga City — ☎️ 0928 676 3500 — <a href="https://www.facebook.com/profile.php?id=61564764930880" style="color:#a6ed80; text-decoration:none;">Facebook</a>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
